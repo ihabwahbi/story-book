@@ -4,3 +4,5 @@
   (29) -> 05_POSE_LIBRARY/pose_thoughtful_smile.jpeg           CONFIRMED KEEP: on-model, compact.
   (30) -> 04_REJECTED_DO_NOT_USE/rejected_proportion_drift_a.jpeg  CONFIRMED REJECT: arms elongated/spindly, outstretched humanlike reach — limb drift.
   (31) -> 04_REJECTED_DO_NOT_USE/rejected_proportion_drift_b.jpeg  CONFIRMED REJECT: body tall/less compact, long legs, saggy fur — proportion drift.
+layout: page 31 text rendered cream (dark zone, mean L=96.0)
+layout: page 32 text rendered cream (dark zone, mean L=104.0)
