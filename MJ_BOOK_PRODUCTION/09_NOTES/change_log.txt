@@ -1,0 +1,6 @@
+2026-07-07  Phase 0 triage — ⚠ re-check decisions (checklist §8.4 of the plan):
+  (1)  -> 02_CHARACTER_CANON/MJ_CANON_SUPPORT_01_running.jpeg  CONFIRMED KEEP: on-model, compact pear, short limbs, correct face/freckles/tufts. Movement-energy reference only.
+  (19) -> 05_POSE_LIBRARY/pose_determined_march.jpeg           CONFIRMED KEEP: proportions compact, on-model; determined expression is an approved turnaround emotion.
+  (29) -> 05_POSE_LIBRARY/pose_thoughtful_smile.jpeg           CONFIRMED KEEP: on-model, compact.
+  (30) -> 04_REJECTED_DO_NOT_USE/rejected_proportion_drift_a.jpeg  CONFIRMED REJECT: arms elongated/spindly, outstretched humanlike reach — limb drift.
+  (31) -> 04_REJECTED_DO_NOT_USE/rejected_proportion_drift_b.jpeg  CONFIRMED REJECT: body tall/less compact, long legs, saggy fur — proportion drift.
