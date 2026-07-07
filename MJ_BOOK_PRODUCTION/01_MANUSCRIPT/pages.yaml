@@ -1,0 +1,261 @@
+# MJ and the Wobbly Days — locked manuscript and page specifications.
+# Source of truth: docs/plans/mj-wobbly-days-production-pipeline.md §7 (verbatim).
+# Text is LOCKED — never edit, never paraphrase. Text never appears inside images.
+# text_safe_side derived: odd page -> right, even page -> left.
+# refs are IN ADDITION to the always-included CANON + TURN bundle.
+
+- page: 1
+  text: "MJ and the Wobbly Days\nA story about courage, difference, and living with MS\nWritten by MJ Donnellan"
+  scene: "Quiet title-page illustration. MJ standing calmly on the LEFT third. A soft warm orange ribbon motif flows horizontally. Large clean cream space on right for title."
+  lighting: title
+  text_safe_side: right
+  refs: [anchor_page01_title]
+  notes: "The canon image IS this composition; aim to match it closely."
+
+- page: 2
+  text: "MJ loved to move."
+  scene: "MJ joyful, energetic, mid-movement (leaping/dancing), soft warm abstract background, uncluttered."
+  lighting: happy_outdoor
+  text_safe_side: left
+  refs: [anchor_joyful_sky]
+  notes: ""
+
+- page: 3
+  text: "She danced while breakfast cooked.\nShe spun across the kitchen floor in her socks."
+  scene: "Warm cosy kitchen, MJ dancing/spinning mid-twirl. MJ wears simple plain cream/off-white socks — the ONLY page with any clothing."
+  lighting: home
+  text_safe_side: right
+  refs: [anchor_kitchen_socks]
+  notes: "Socks: simple, no patterns, no shoes."
+
+- page: 4
+  text: "She ran barefoot through the grass.\nShe twirled until the world went dizzy and fell into giggles.\nMovement made MJ feel free."
+  scene: "Outdoor grass meadow, sky, flowers; MJ barefoot running/twirling, joyful freedom."
+  lighting: happy_outdoor
+  text_safe_side: left
+  refs: [anchor_outdoor_meadow, MJ_CANON_SUPPORT_01_running]
+  notes: ""
+
+- page: 5
+  text: "Until one day…\nsomething changed."
+  scene: "MJ paused mid-step in a familiar warm home hallway, uncertain expression, subtle stillness."
+  lighting: home_muted
+  text_safe_side: right
+  refs: [anchor_home_hallway, pose_paused_midstep]
+  notes: "Page 5 drifted repeatedly in the previous run — expect extra retries."
+
+- page: 6
+  text: "Her legs felt strange.\nHeavy.\nWobbly."
+  scene: "MJ standing unsteadily, legs unstable/heavy, arms slightly out for balance. Gentle uncertainty, not slapstick."
+  lighting: home_muted
+  text_safe_side: left
+  refs: [pose_wobbly_balance]
+  notes: ""
+
+- page: 7
+  text: "Her hands dropped things she was sure she was holding.\nAnd some mornings, MJ woke up tired before the day had even begun."
+  scene: "One single scene (no collage): MJ looking at a soft dropped object (e.g. a wooden toy) at her feet, tired eyes, morning bedroom light."
+  lighting: home_muted
+  text_safe_side: right
+  refs: [pose_dropping_blocks, pose_tired_rubbing_eye]
+  notes: ""
+
+- page: 8
+  text: "At first, nobody understood.\nNot even MJ.\n'Maybe you just need more sleep,' people said.\n'Maybe you're doing too much.'"
+  scene: "MJ small and quiet in a warm room, feeling misunderstood; other people implied (soft shadows/doorway), not shown."
+  lighting: home_muted
+  text_safe_side: left
+  refs: [pose_confused_scratch]
+  notes: ""
+
+- page: 9
+  text: "But MJ knew.\nSomething didn't feel right."
+  scene: "MJ quiet, inward, sitting alone, knowing look, gentle stillness."
+  lighting: home_muted
+  text_safe_side: right
+  refs: [pose_sad_seated]
+  notes: ""
+
+- page: 10
+  text: "Then one day, after her legs shook and her eyes went blurry, MJ found herself in a big hospital room, holding her mum's hand so tightly her fingers hurt."
+  scene: "Soft safe hospital room, MJ seated holding Mum's hand tightly. Mum: warm human woman, shoulder-length brown hair, cosy cardigan, gentle. Safe, not scary. NO hospital gown on MJ."
+  lighting: hospital
+  text_safe_side: left
+  refs: [anchor_hospital_mum]
+  notes: "Defines Mum's canon look — anchor_hospital_mum shows it."
+
+- page: 11
+  text: "That was the day the doctors said words MJ had never heard before:\nMultiple Sclerosis.\nMS."
+  scene: "Kind female doctor (short hair, warm smile, no scary tools) gently talking; MJ and Mum together listening. No scary medical imagery."
+  lighting: hospital
+  text_safe_side: right
+  refs: [anchor_hospital_mum, APPROVED(10)]
+  notes: "Defines Doctor's canon look."
+
+- page: 12
+  text: "Her mum rubbed circles on her hand.\n'What does that mean?' MJ whispered."
+  scene: "Close, intimate: Mum holding/rubbing MJ's hand, MJ looking up asking."
+  lighting: hospital
+  text_safe_side: left
+  refs: [APPROVED(10), pose_reaching_hand]
+  notes: ""
+
+- page: 13
+  text: "The doctor smiled kindly.\n'It means the messages from your brain to your body sometimes get a little mixed up.'"
+  scene: "Doctor kneeling/leaning to MJ's level explaining gently; optional soft visual metaphor (gentle swirling dotted line motif), no technical diagrams."
+  lighting: hospital
+  text_safe_side: right
+  refs: [APPROVED(11)]
+  notes: ""
+
+- page: 14
+  text: "MJ blinked.\n'Like bad phone reception?'\nThe doctor laughed softly.\n'A little bit like that.'"
+  scene: "MJ with curious brightening expression, doctor softly laughing. Child-friendly, warm."
+  lighting: hospital
+  text_safe_side: left
+  refs: [APPROVED(11), pose_curious_thinking]
+  notes: ""
+
+- page: 15
+  text: "Sometimes MS made walking harder.\nSometimes it made MJ tired.\nSometimes sore.\nSometimes shaky.\nAnd sometimes scared."
+  scene: "MJ walking carefully across a warm home room, one careful step, concentrating. Safe and gentle."
+  lighting: home_muted
+  text_safe_side: right
+  refs: [pose_careful_step]
+  notes: ""
+
+- page: 16
+  text: "'Will I always be different?' MJ asked quietly.\nHer mum squeezed her hand.\n'Yes,' she said gently.\n'But different does not mean less.'"
+  scene: "Quiet emotional moment: MJ and Mum close together (sofa/bedside), hand squeeze."
+  lighting: home_muted
+  text_safe_side: left
+  refs: [APPROVED(10), pose_vulnerable_with_adult]
+  notes: ""
+
+- page: 17
+  text: "That didn't make everything easier.\nThere were still hard days.\nDays MJ fell over.\nDays her legs wouldn't listen.\nDays she cried because her body felt cross with her."
+  scene: "MJ sitting on the floor after a gentle stumble, small tears, hugging a knee. Gentle, not dramatic."
+  lighting: home_muted
+  text_safe_side: right
+  refs: [pose_sad_curled]
+  notes: ""
+
+- page: 18
+  text: "Days people said things that hurt.\n'But you don't look sick.'"
+  scene: "MJ hurt by words, looking down; other children implied softly (partial figures/shadows at edge), MJ the clear focus."
+  lighting: home_muted
+  text_safe_side: left
+  refs: [pose_hurt_standing]
+  notes: ""
+
+- page: 19
+  text: "MJ wished they could see what she felt.\nThe aching in her legs.\nThe tiredness behind her smile.\nThe fear that came when she had to walk across a room by herself."
+  scene: "MJ at one side of a room, facing the long distance across it; hidden-symptom mood, brave-but-afraid."
+  lighting: home_muted
+  text_safe_side: right
+  refs: [pose_afraid_to_cross]
+  notes: ""
+
+- page: 20
+  text: "But little by little…\nMJ learned something.\nShe was still MJ.\nStill funny.\nStill brave.\nStill full of colour.\nStill full of dreams."
+  scene: "Self-recognition: MJ seeing herself (mirror motif allowed), warm hopeful light and colour returning."
+  lighting: home
+  text_safe_side: left
+  refs: [pose_self_recognition]
+  notes: ""
+
+- page: 21
+  text: "On wobbly days, she moved slower.\nOn tired days, she rested.\nOn hard days, she asked for help."
+  scene: "ONE strong restful image (no montage/collage): MJ resting cosily (blanket/cushion), calm and accepting."
+  lighting: home
+  text_safe_side: right
+  refs: [pose_resting]
+  notes: ""
+
+- page: 22
+  text: "And one afternoon, while painting swirls of bright orange across a canvas, her little cousin asked:\n'What are you making?'\nMJ smiled.\n'My messy storm.'"
+  scene: "Warm art room: MJ painting big orange swirls on a canvas/easel, paintbrush in hand; little Cousin (small human child, curious) watching. MJ dominant."
+  lighting: art_room
+  text_safe_side: left
+  refs: [anchor_art_room]
+  notes: "Defines Cousin's canon look."
+
+- page: 23
+  text: "Her cousin frowned.\n'It looks sunny too.'\nMJ grinned.\n'It can be both.'"
+  scene: "Cousin and MJ looking at the swirl painting together; sunny/stormy duality visible in the painting."
+  lighting: art_room
+  text_safe_side: right
+  refs: [APPROVED(22), anchor_painting_look]
+  notes: ""
+
+- page: 24
+  text: "That made her cousin think very hard.\nThen he smiled.\n'Oh.'\nAnd maybe life could be like that too."
+  scene: "Quiet reflective beat: Cousin thinking then softly smiling, MJ beside the painting."
+  lighting: art_room
+  text_safe_side: left
+  refs: [APPROVED(22)]
+  notes: ""
+
+- page: 25
+  text: "Hard and beautiful.\nScary and brave.\nDifferent and wonderful."
+  scene: "Symbolic, simple, poetic: MJ peaceful amid soft orange swirls/light (echo of the painting), minimal scene."
+  lighting: art_room
+  text_safe_side: right
+  refs: [APPROVED(22)]
+  notes: ""
+
+- page: 26
+  text: "Soon MJ began sharing her story.\nShe told children that some differences are easy to see…\nand some are hidden."
+  scene: "MJ gently speaking to a small group of listening children (diverse, simple, soft style); MJ the focus."
+  lighting: classroom
+  text_safe_side: left
+  refs: [anchor_art_room]
+  notes: "No classroom anchor exists; rely on style-lock + canon."
+
+- page: 27
+  text: "Some people use wheelchairs.\nSome wear hearing aids.\nSome need medicine.\nSome need extra rest.\nAnd everyone deserves kindness."
+  scene: "Inclusive, age-appropriate children/community scene (a child with a wheelchair, a hearing aid — gentle, simple); MJ present and warm."
+  lighting: classroom
+  text_safe_side: right
+  refs: [APPROVED(26)]
+  notes: ""
+
+- page: 28
+  text: "One little girl raised her hand.\n'So being different isn't bad?'\nMJ smiled.\n'No.'"
+  scene: "A little girl with raised hand asking; MJ smiling reassuringly."
+  lighting: classroom
+  text_safe_side: left
+  refs: [APPROVED(26)]
+  notes: ""
+
+- page: 29
+  text: "She looked around the room.\n'Different just means we all have different stories.'\nA quiet voice whispered from the back:\n'That makes the world more interesting.'"
+  scene: "Warm classroom/group scene, children listening, cosy togetherness."
+  lighting: classroom
+  text_safe_side: right
+  refs: [APPROVED(26)]
+  notes: ""
+
+- page: 30
+  text: "MJ felt tears sting her eyes.\nBecause once, she thought being different meant something was wrong with her.\nBut maybe…\nit just meant her story looked different."
+  scene: "MJ emotionally moved, gentle glistening tears, warm light — moved, not despairing."
+  lighting: home
+  text_safe_side: left
+  refs: [pose_moved_tears]
+  notes: "Distinct from the night pages; warm indoor."
+
+- page: 31
+  text: "That night, MJ stood at her window looking at the stars.\nHer legs hurt.\nHer body was tired.\nBut her heart felt full."
+  scene: "MJ at her bedroom window at night, stars outside, warm lamp inside; tired but peaceful."
+  lighting: night
+  text_safe_side: right
+  refs: [anchor_night_window]
+  notes: ""
+
+- page: 32
+  text: "Because even on the wobbly days…\nshe was still learning.\nStill growing.\nStill shining.\nAnd being different?\nThat was never something to hide.\nThat was something to honour."
+  scene: "Final hopeful image: MJ peaceful and quietly proud, stars or warm glow. NO magical cure imagery (MJ is not \"fixed\")."
+  lighting: night
+  text_safe_side: left
+  refs: [APPROVED(31), pose_proud_peaceful]
+  notes: ""
