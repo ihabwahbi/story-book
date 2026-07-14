@@ -99,6 +99,13 @@ def _block_a(ref_paths: list[Path]) -> str:
                 f"Image {i} is an approved movement-energy reference only — "
                 f"never override Image 1's proportions with it."
             )
+        elif stem == "anchor_hospital_mum":
+            sentences.append(
+                f"Image {i} is a hospital composition and painterly-style "
+                f"reference only. Do not copy either adult's appearance from "
+                f"it; the current page scene and mandatory client correction "
+                f"define Mum and Doctor appearance and override this image."
+            )
         elif stem.startswith("pose_"):
             sentences.append(
                 f"Image {i} is an approved pose reference for MJ's body "
@@ -128,11 +135,17 @@ def build_page_prompt(
         clothing=CLOTHING_EXCEPTIONS.get(page_spec["page"], "")
     )
     scene = page_spec["scene"]
+    visual_requirements = page_spec.get("visual_requirements", "")
     lighting = ms.LIGHTING_CLASSES[page_spec["lighting"]]
     block_d = (
         f"{scene} Lighting: {lighting}. "
         + COMPOSITION.format(side=side, other=other)
     )
+    if visual_requirements:
+        block_d += (
+            " Mandatory client correction—this is a hard acceptance "
+            f"requirement: {visual_requirements}"
+        )
 
     blocks = [block_a, STYLE_LOCK, block_c, block_d, NEGATIVES]
     if retry_failures:

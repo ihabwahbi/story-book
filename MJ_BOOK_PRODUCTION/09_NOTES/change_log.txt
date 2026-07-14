@@ -6,3 +6,18 @@
   (31) -> 04_REJECTED_DO_NOT_USE/rejected_proportion_drift_b.jpeg  CONFIRMED REJECT: body tall/less compact, long legs, saggy fur — proportion drift.
 layout: page 31 text rendered cream (dark zone, mean L=96.0)
 layout: page 32 text rendered cream (dark zone, mean L=104.0)
+feedback revision visual QA: page 09 PASS — MJ has a nervous, unsure closed-mouth half-smile with raised inner eyebrows, not a happy broad smile.
+feedback revision visual QA: page 10 PASS — MJ is visibly worried and not smiling; Mum is light-skinned with short dark-brown hair above the ears and a rust cardigan.
+feedback revision visual QA: page 11 PASS — Mum matches page 10; Doctor is visibly distinct with deep brown skin, close-cropped natural curls, teal blouse, and white coat.
+feedback revision visual QA: page 12 PASS — MJ repeats page 10's worried non-smiling expression; Mum matches the short dark hair and rust-cardigan canon.
+feedback revision visual QA: page 13 PASS — Doctor matches page 11's deep brown skin, close-cropped natural curls, teal blouse, and white coat.
+feedback revision visual QA: page 14 PASS — Doctor remains consistent with pages 11 and 13 while MJ's expression appropriately brightens.
+feedback revision visual QA: page 16 PASS — Mum matches page 10's short dark hair and rust cardigan in the hand-squeeze scene.
+feedback revision visual QA: page 23 PASS — MJ is approximately the cousin's standing height, matching the normal scale on pages 22 and 24 rather than miniaturized.
+feedback revision visual QA: page 31 PASS — MJ has exactly two clearly separated legs and two feet with no third leg, extra foot, tail, or limb-like silhouette.
+feedback revision visual QA: page 32 PASS — MJ has exactly two clearly separated legs and two feet with no third leg, extra foot, tail, or limb-like silhouette.
+feedback revision visual QA: cover front PASS — MJ is on-model at right with two legs/two feet; the left copy area is clean; sunflower meadow, butterflies, and colourful stepping stones match the client direction with no baked text.
+feedback revision visual QA: cover back PASS — art matches the approved front; smaller on-model MJ sits at mid-right above the ISBN area; the left copy area is clean and no baked text appears.
+feedback revision visual QA: composed covers PASS — correct title/subtitle/author, complete back copy and tagline, clear ISBN placeholder, legible real typography, and no visible generated text underneath.
+layout: page 31 text rendered cream (dark zone, mean L=45.5)
+layout: page 32 text rendered cream (dark zone, mean L=29.7)

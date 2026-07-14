@@ -5,7 +5,7 @@
 # refs are IN ADDITION to the always-included CANON + TURN bundle.
 
 - page: 1
-  text: "MJ and the Wobbly Days\nA story about courage, difference, and living with MS\nWritten by MJ Donnellan"
+  text: "MJ and the Wobbly Days\nA story about courage, difference, and living with MS\nWritten by MJ Donnellan\nTo all the children I’ve had the privilege and joy of teaching over the years: never be afraid to be different. It’s our differences that make each of us unique, and they are what make the world a more beautiful, colourful, and interesting place."
   scene: "Quiet title-page illustration. MJ standing calmly on the LEFT third. A soft warm orange ribbon motif flows horizontally. Large clean cream space on right for title."
   lighting: title
   text_safe_side: right
@@ -70,51 +70,67 @@
 
 - page: 9
   text: "But MJ knew.\nSomething didn't feel right."
-  scene: "MJ quiet, inward, sitting alone, knowing look, gentle stillness."
+  scene: "MJ quiet, inward, sitting alone, with a nervous, unsure closed-mouth half-smile and worried raised inner eyebrows. The expression is uncertain, not happy or cheerful. Gentle stillness."
   lighting: home_muted
   text_safe_side: right
   refs: [pose_sad_seated]
-  notes: ""
+  revision_attempt_start: 2
+  visual_requirements: "MJ has a nervous, unsure closed-mouth half-smile with worried raised inner eyebrows; MJ must not look happy or broadly smiling."
+  notes: "Client correction: unsure smile, not a happy smile."
 
 - page: 10
-  text: "Then one day, after her legs shook and her eyes went blurry, MJ found herself in a big hospital room, holding her mum's hand so tightly her fingers hurt."
-  scene: "Soft safe hospital room, MJ seated holding Mum's hand tightly. Mum: warm human woman, shoulder-length brown hair, cosy cardigan, gentle. Safe, not scary. NO hospital gown on MJ."
+  text: "Then one day, after her legs shook and her eyes went blurry, MJ found herself in a big hospital room, holding her Mum's hand so tightly her fingers hurt."
+  scene: "Soft safe hospital room, MJ seated holding Mum's hand tightly. MJ looks clearly worried and uncertain, with raised inner eyebrows and a small downturned or tense mouth—no smile. Mum is a warm human woman with a short, dark-brown pixie-bob haircut ending above her ears, a rust-coloured cosy cardigan, and a gentle expression. Safe, not scary. NO hospital gown on MJ."
   lighting: hospital
   text_safe_side: left
   refs: [anchor_hospital_mum]
-  notes: "Defines Mum's canon look — anchor_hospital_mum shows it."
+  revision_attempt_start: 3
+  visual_requirements: "MJ looks worried, not smiling. Mum is light-skinned and has unmistakably short dark-brown hair above the ears and a rust cardigan."
+  notes: "Revised Mum canon: short dark-brown pixie-bob and rust cardigan; the old anchor is composition/style only."
 
 - page: 11
   text: "That was the day the doctors said words MJ had never heard before:\nMultiple Sclerosis.\nMS."
-  scene: "Kind female doctor (short hair, warm smile, no scary tools) gently talking; MJ and Mum together listening. No scary medical imagery."
+  scene: "Kind female Doctor gently talking while MJ and Mum listen. Mum exactly matches page 10: short dark-brown pixie-bob above the ears and rust cardigan. Doctor is unmistakably different: a Black woman with deep brown skin, close-cropped natural black curls, a teal blouse, and a white coat. No scary tools or medical imagery."
   lighting: hospital
   text_safe_side: right
   refs: [anchor_hospital_mum, APPROVED(10)]
-  notes: "Defines Doctor's canon look."
+  revision_attempt_start: 2
+  qa_comparison_pages: [10]
+  visual_requirements: "Mum and Doctor are two clearly different women: Mum has light skin, short dark-brown pixie-bob and rust cardigan; Doctor has deep brown skin, close-cropped natural black curls, teal blouse and white coat."
+  notes: "Defines revised Doctor canon; Mum and Doctor must never look alike."
 
 - page: 12
-  text: "Her mum rubbed circles on her hand.\n'What does that mean?' MJ whispered."
-  scene: "Close, intimate: Mum holding/rubbing MJ's hand, MJ looking up asking."
+  text: "Her Mum rubbed circles on her hand.\n'What does that mean?' MJ whispered."
+  scene: "Close, intimate: Mum from page 10, with short dark-brown pixie-bob above the ears and rust cardigan, holding and rubbing MJ's hand. MJ has the same clearly worried, uncertain expression as page 10, with raised inner eyebrows and a small tense mouth—no smile."
   lighting: hospital
   text_safe_side: left
   refs: [APPROVED(10), pose_reaching_hand]
-  notes: ""
+  revision_attempt_start: 2
+  qa_comparison_pages: [10]
+  visual_requirements: "Mum matches page 10's short dark hair and rust cardigan. MJ looks worried exactly as on page 10 and is not smiling."
+  notes: "Client correction: repeat page 10's worried MJ expression."
 
 - page: 13
   text: "The doctor smiled kindly.\n'It means the messages from your brain to your body sometimes get a little mixed up.'"
-  scene: "Doctor kneeling/leaning to MJ's level explaining gently; optional soft visual metaphor (gentle swirling dotted line motif), no technical diagrams."
+  scene: "The same Doctor from page 11—a Black woman with deep brown skin, close-cropped natural black curls, teal blouse and white coat—kneeling or leaning to MJ's level and explaining gently; optional soft visual metaphor (gentle swirling dotted line motif), no technical diagrams."
   lighting: hospital
   text_safe_side: right
   refs: [APPROVED(11)]
-  notes: ""
+  revision_attempt_start: 2
+  qa_comparison_pages: [11]
+  visual_requirements: "Doctor exactly matches page 11: deep brown skin, close-cropped natural black curls, teal blouse and white coat."
+  notes: "Revised Doctor continuity."
 
 - page: 14
   text: "MJ blinked.\n'Like bad phone reception?'\nThe doctor laughed softly.\n'A little bit like that.'"
-  scene: "MJ with curious brightening expression, doctor softly laughing. Child-friendly, warm."
+  scene: "MJ with curious brightening expression; the same Doctor from page 11—with deep brown skin, close-cropped natural black curls, teal blouse and white coat—laughs softly. Child-friendly, warm."
   lighting: hospital
   text_safe_side: left
   refs: [APPROVED(11), pose_curious_thinking]
-  notes: ""
+  revision_attempt_start: 2
+  qa_comparison_pages: [11]
+  visual_requirements: "Doctor exactly matches page 11: deep brown skin, close-cropped natural black curls, teal blouse and white coat."
+  notes: "Revised Doctor continuity."
 
 - page: 15
   text: "Sometimes MS made walking harder.\nSometimes it made MJ tired.\nSometimes sore.\nSometimes shaky.\nAnd sometimes scared."
@@ -125,15 +141,18 @@
   notes: ""
 
 - page: 16
-  text: "'Will I always be different?' MJ asked quietly.\nHer mum squeezed her hand.\n'Yes,' she said gently.\n'But different does not mean less.'"
-  scene: "Quiet emotional moment: MJ and Mum close together (sofa/bedside), hand squeeze."
+  text: "'Will I always be different?' MJ asked quietly.\nHer Mum squeezed her hand.\n'Yes,' she said gently.\n'But different does not mean less.'"
+  scene: "Quiet emotional moment: MJ and Mum close together on a sofa or bedside, sharing a hand squeeze. Mum exactly matches page 10: short dark-brown pixie-bob above the ears and rust cardigan."
   lighting: home_muted
   text_safe_side: left
   refs: [APPROVED(10), pose_vulnerable_with_adult]
-  notes: ""
+  revision_attempt_start: 2
+  qa_comparison_pages: [10]
+  visual_requirements: "Mum matches page 10's short dark-brown hair above the ears and rust cardigan."
+  notes: "Revised Mum continuity."
 
 - page: 17
-  text: "That didn't make everything easier.\nThere were still hard days.\nDays MJ fell over.\nDays her legs wouldn't listen.\nDays she cried because her body felt cross with her."
+  text: "That didn't make everything easier.\nThere were still hard days.\nSome days MJ fell over.\nSome days her legs wouldn't listen.\nSome days she cried because her body felt cross with her."
   scene: "MJ sitting on the floor after a gentle stumble, small tears, hugging a knee. Gentle, not dramatic."
   lighting: home_muted
   text_safe_side: right
@@ -141,7 +160,7 @@
   notes: ""
 
 - page: 18
-  text: "Days people said things that hurt.\n'But you don't look sick.'"
+  text: "Some days people said things that hurt.\n'But you don't look sick.'"
   scene: "MJ hurt by words, looking down; other children implied softly (partial figures/shadows at edge), MJ the clear focus."
   lighting: home_muted
   text_safe_side: left
@@ -182,11 +201,14 @@
 
 - page: 23
   text: "Her cousin frowned.\n'It looks sunny too.'\nMJ grinned.\n'It can be both.'"
-  scene: "Cousin and MJ looking at the swirl painting together; sunny/stormy duality visible in the painting."
+  scene: "Cousin and MJ standing side by side looking at the swirl painting together; sunny/stormy duality visible in the painting. MJ is the same normal standing size seen on pages 22 and 24, approximately the cousin's standing height—not tiny, miniaturized, or much shorter than the child."
   lighting: art_room
   text_safe_side: right
   refs: [APPROVED(22), anchor_painting_look]
-  notes: ""
+  revision_attempt_start: 2
+  qa_comparison_pages: [22, 24]
+  visual_requirements: "MJ is approximately the cousin's standing height, matching MJ's scale on pages 22 and 24; MJ is not miniaturized or much smaller than the child."
+  notes: "Client correction: restore normal MJ scale."
 
 - page: 24
   text: "That made her cousin think very hard.\nThen he smiled.\n'Oh.'\nAnd maybe life could be like that too."
@@ -229,7 +251,7 @@
   notes: ""
 
 - page: 29
-  text: "She looked around the room.\n'Different just means we all have different stories.'\nA quiet voice whispered from the back:\n'That makes the world more interesting.'"
+  text: "She looked around the room.\n'Different just means we all have different stories.'\n'That makes the world more interesting.'"
   scene: "Warm classroom/group scene, children listening, cosy togetherness."
   lighting: classroom
   text_safe_side: right
@@ -246,16 +268,21 @@
 
 - page: 31
   text: "That night, MJ stood at her window looking at the stars.\nHer legs hurt.\nHer body was tired.\nBut her heart felt full."
-  scene: "MJ at her bedroom window at night, stars outside, warm lamp inside; tired but peaceful."
+  scene: "MJ at her bedroom window at night, stars outside, warm lamp inside; tired but peaceful. MJ's full body has exactly two short legs and exactly two rounded feet, with both feet clearly readable. No extra leg, extra foot, tail, or limb-like fur shape."
   lighting: night
   text_safe_side: right
   refs: [anchor_night_window]
-  notes: ""
+  revision_attempt_start: 3
+  visual_requirements: "MJ has exactly two legs and two feet; there is no third leg, extra foot, tail, or ambiguous limb-like silhouette."
+  notes: "Client correction: remove extra-leg silhouette."
 
 - page: 32
   text: "Because even on the wobbly days…\nshe was still learning.\nStill growing.\nStill shining.\nAnd being different?\nThat was never something to hide.\nThat was something to honour."
-  scene: "Final hopeful image: MJ peaceful and quietly proud, stars or warm glow. NO magical cure imagery (MJ is not \"fixed\")."
+  scene: "Final hopeful image: MJ peaceful and quietly proud, stars or warm glow. MJ's full body has exactly two short legs and exactly two rounded feet, clearly separated and readable. No extra leg, extra foot, tail, or limb-like fur shape. NO magical cure imagery (MJ is not \"fixed\")."
   lighting: night
   text_safe_side: left
   refs: [APPROVED(31), pose_proud_peaceful]
-  notes: ""
+  revision_attempt_start: 2
+  qa_comparison_pages: [31]
+  visual_requirements: "MJ has exactly two legs and two feet; there is no third leg, extra foot, tail, or ambiguous limb-like silhouette."
+  notes: "Client correction: remove extra-leg silhouette."

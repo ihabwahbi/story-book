@@ -24,6 +24,7 @@ BODY_FLOOR = 40
 TITLE_SIZE = 96
 SUBTITLE_SIZE = 48
 AUTHOR_SIZE = 40
+DEDICATION_SIZE = 28
 PAGE_NUMBER_SIZE = 28
 
 BROWN = "#4A3426"
@@ -142,8 +143,8 @@ def _fit_title_text(
     max_height: int,
 ) -> tuple[list[tuple[ImageFont.FreeTypeFont, list[str]]], int]:
     parts = text.split("\n")
-    if len(parts) != 3:
-        raise ValueError(f"page {page:02d}: title page text must have exactly 3 lines")
+    if len(parts) != 4:
+        raise ValueError(f"page {page:02d}: title page text must have exactly 4 lines")
 
     title_floor = _title_floor(TITLE_SIZE)
     floor_result: tuple[
@@ -155,11 +156,13 @@ def _fit_title_text(
             title_size,
             max(_title_floor(SUBTITLE_SIZE), round(SUBTITLE_SIZE * scale)),
             max(_title_floor(AUTHOR_SIZE), round(AUTHOR_SIZE * scale)),
+            max(_title_floor(DEDICATION_SIZE), round(DEDICATION_SIZE * scale)),
         )
         fonts = (
             _font(BOLD_FONT, sizes[0]),
             _font(REGULAR_FONT, sizes[1]),
             _font(REGULAR_FONT, sizes[2]),
+            _font(REGULAR_FONT, sizes[3]),
         )
         sections = [
             (font, _wrap_source_line(draw, part, font, block_width))
@@ -237,6 +240,21 @@ def _draw_title(
     cursor_y = y
     for section_idx, (font, lines) in enumerate(sections):
         advance = _line_advance(font)
+        if section_idx == 3:
+            section_width = max(_text_width(draw, line, font) for line in lines)
+            section_height = advance * len(lines)
+            pad_x = 18
+            pad_y = 10
+            draw.rounded_rectangle(
+                (
+                    x - pad_x,
+                    cursor_y - pad_y,
+                    x + math.ceil(section_width) + pad_x,
+                    cursor_y + section_height + pad_y,
+                ),
+                radius=16,
+                fill=(255, 248, 232, 225),
+            )
         for line in lines:
             draw.text((x, cursor_y), line, font=font, fill=colour)
             cursor_y += advance

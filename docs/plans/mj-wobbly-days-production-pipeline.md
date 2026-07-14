@@ -23,7 +23,7 @@ The goal of this work: produce all 32 approved page illustrations plus the assem
 | Fact | Value |
 |---|---|
 | Repo path | `/workspace/projects/story-book` (NOT a git repo yet) |
-| Codex CLI | v0.142.5 at `/home/linuxbrew/.linuxbrew/bin/codex`, authenticated via ChatGPT login (`~/.codex/auth.json`), default model `gpt-5.5` |
+| Codex CLI | v0.144.1 at `/home/linuxbrew/.linuxbrew/bin/codex`, authenticated via ChatGPT login (`~/.codex/auth.json`), default model `gpt-5.5` |
 | Codex image generation | Feature `image_generation` is `stable true` (check: `codex features list \| grep image`). Invoked with `$imagegen` in the prompt. Uses **gpt-image-2**. Billed to the ChatGPT subscription. |
 | `OPENAI_API_KEY` | **Not available** — neither in env nor in `~/.codex/auth.json`. The raw OpenAI Images API cannot be called. Codex is the only authenticated generation route. |
 | Python | 3.14 with **Pillow 12.1.1** and **PyYAML** installed. `reportlab` NOT installed — do not use it. `pip` available if needed. |
@@ -145,14 +145,16 @@ Codex's built-in tool outputs ≈1.5 MP (verified 1495×1052). The pipeline stan
 4. Pilot run (3 pages), then all 32 interior pages generated, QA-passed, finished at 2048×1448.
 5. Final layout: manuscript text placed in text-safe zones; 32-page proof PDF.
 6. Approval log covering every attempt.
+7. The July 2026 revision adds the external front/back cover specified in
+   `docs/plans/mj-wobbly-days-feedback-revision.md`.
 
 **Out of scope**
 
-- The **external book cover** (the handoff states "The external cover is separate"). Do not generate one.
 - Print-master resolution regeneration (blocked on OQ-1 / API key).
 - Any raw OpenAI API integration, second engine, or fallback path.
 - 3D/Unreal asset work.
-- Editing/rewriting manuscript text (it is locked).
+- Editing/rewriting manuscript text except for the exact client-authorized
+  corrections in `docs/plans/mj-wobbly-days-feedback-revision.md`.
 
 ---
 
@@ -176,7 +178,7 @@ Phase 1 converts this section verbatim into `MJ_BOOK_PRODUCTION/01_MANUSCRIPT/pa
 
 | Pg | Text (verbatim, for layout stage — NEVER inside the image) | Scene brief | Lighting | Text-safe side | Refs beyond CANON+TURN | Notes |
 |----|---|---|---|---|---|---|
-| 1 | MJ and the Wobbly Days\nA story about courage, difference, and living with MS\nWritten by MJ Donnellan | Quiet title-page illustration. MJ standing calmly on the LEFT third. A soft warm orange ribbon motif flows horizontally. Large clean cream space on right for title. | title | right | anchor_page01_title | The canon image IS this composition; aim to match it closely. |
+| 1 | MJ and the Wobbly Days\nA story about courage, difference, and living with MS\nWritten by MJ Donnellan\nTo all the children I’ve had the privilege and joy of teaching over the years: never be afraid to be different. It’s our differences that make each of us unique, and they are what make the world a more beautiful, colourful, and interesting place. | Quiet title-page illustration. MJ standing calmly on the LEFT third. A soft warm orange ribbon motif flows horizontally. Large clean cream space on right for title. | title | right | anchor_page01_title | The canon image IS this composition; aim to match it closely. |
 | 2 | MJ loved to move. | MJ joyful, energetic, mid-movement (leaping/dancing), soft warm abstract background, uncluttered. | happy_outdoor | left | anchor_joyful_sky | |
 | 3 | She danced while breakfast cooked.\nShe spun across the kitchen floor in her socks. | Warm cosy kitchen, MJ dancing/spinning mid-twirl. MJ wears simple plain cream/off-white socks — the ONLY page with any clothing. | home | right | anchor_kitchen_socks | Socks: simple, no patterns, no shoes. |
 | 4 | She ran barefoot through the grass.\nShe twirled until the world went dizzy and fell into giggles.\nMovement made MJ feel free. | Outdoor grass meadow, sky, flowers; MJ barefoot running/twirling, joyful freedom. | happy_outdoor | left | anchor_outdoor_meadow, MJ_CANON_SUPPORT_01_running | |
@@ -184,30 +186,30 @@ Phase 1 converts this section verbatim into `MJ_BOOK_PRODUCTION/01_MANUSCRIPT/pa
 | 6 | Her legs felt strange.\nHeavy.\nWobbly. | MJ standing unsteadily, legs unstable/heavy, arms slightly out for balance. Gentle uncertainty, not slapstick. | home_muted | left | pose_wobbly_balance | |
 | 7 | Her hands dropped things she was sure she was holding.\nAnd some mornings, MJ woke up tired before the day had even begun. | One single scene (no collage): MJ looking at a soft dropped object (e.g. a wooden toy) at her feet, tired eyes, morning bedroom light. | home_muted | right | pose_dropping_blocks, pose_tired_rubbing_eye | |
 | 8 | At first, nobody understood.\nNot even MJ.\n'Maybe you just need more sleep,' people said.\n'Maybe you're doing too much.' | MJ small and quiet in a warm room, feeling misunderstood; other people implied (soft shadows/doorway), not shown. | home_muted | left | pose_confused_scratch | |
-| 9 | But MJ knew.\nSomething didn't feel right. | MJ quiet, inward, sitting alone, knowing look, gentle stillness. | home_muted | right | pose_sad_seated | |
-| 10 | Then one day, after her legs shook and her eyes went blurry, MJ found herself in a big hospital room, holding her mum's hand so tightly her fingers hurt. | Soft safe hospital room, MJ seated holding Mum's hand tightly. Mum: warm human woman, shoulder-length brown hair, cosy cardigan, gentle. Safe, not scary. NO hospital gown on MJ. | hospital | left | anchor_hospital_mum | Defines Mum's canon look — anchor_hospital_mum shows it. |
-| 11 | That was the day the doctors said words MJ had never heard before:\nMultiple Sclerosis.\nMS. | Kind female doctor (short hair, warm smile, no scary tools) gently talking; MJ and Mum together listening. No scary medical imagery. | hospital | right | anchor_hospital_mum, APPROVED(10) | Defines Doctor's canon look. |
-| 12 | Her mum rubbed circles on her hand.\n'What does that mean?' MJ whispered. | Close, intimate: Mum holding/rubbing MJ's hand, MJ looking up asking. | hospital | left | APPROVED(10), pose_reaching_hand | |
-| 13 | The doctor smiled kindly.\n'It means the messages from your brain to your body sometimes get a little mixed up.' | Doctor kneeling/leaning to MJ's level explaining gently; optional soft visual metaphor (gentle swirling dotted line motif), no technical diagrams. | hospital | right | APPROVED(11) | |
-| 14 | MJ blinked.\n'Like bad phone reception?'\nThe doctor laughed softly.\n'A little bit like that.' | MJ with curious brightening expression, doctor softly laughing. Child-friendly, warm. | hospital | left | APPROVED(11), pose_curious_thinking | |
+| 9 | But MJ knew.\nSomething didn't feel right. | MJ quiet and inward, with a nervous, unsure closed-mouth half-smile and worried raised inner eyebrows—not a happy smile. | home_muted | right | pose_sad_seated | Client correction: unsure smile. |
+| 10 | Then one day, after her legs shook and her eyes went blurry, MJ found herself in a big hospital room, holding her Mum's hand so tightly her fingers hurt. | Soft safe hospital room. MJ looks worried while holding Mum's hand. Mum has a short dark-brown pixie-bob above the ears and a rust cardigan. | hospital | left | anchor_hospital_mum | Revised Mum canon; old anchor is composition/style only. |
+| 11 | That was the day the doctors said words MJ had never heard before:\nMultiple Sclerosis.\nMS. | Mum matches page 10. Doctor is a visibly different Black woman with deep brown skin, close-cropped natural black curls, teal blouse, and white coat. | hospital | right | anchor_hospital_mum, APPROVED(10) | Defines revised Doctor canon. |
+| 12 | Her Mum rubbed circles on her hand.\n'What does that mean?' MJ whispered. | Mum matches page 10; MJ repeats page 10's worried expression. | hospital | left | APPROVED(10), pose_reaching_hand | |
+| 13 | The doctor smiled kindly.\n'It means the messages from your brain to your body sometimes get a little mixed up.' | The revised Doctor from page 11 kneels or leans to MJ's level and explains gently; optional soft visual metaphor, no technical diagrams. | hospital | right | APPROVED(11) | Revised Doctor continuity. |
+| 14 | MJ blinked.\n'Like bad phone reception?'\nThe doctor laughed softly.\n'A little bit like that.' | MJ with curious brightening expression; the revised Doctor from page 11 laughs softly. Child-friendly, warm. | hospital | left | APPROVED(11), pose_curious_thinking | Revised Doctor continuity. |
 | 15 | Sometimes MS made walking harder.\nSometimes it made MJ tired.\nSometimes sore.\nSometimes shaky.\nAnd sometimes scared. | MJ walking carefully across a warm home room, one careful step, concentrating. Safe and gentle. | home_muted | right | pose_careful_step | |
-| 16 | 'Will I always be different?' MJ asked quietly.\nHer mum squeezed her hand.\n'Yes,' she said gently.\n'But different does not mean less.' | Quiet emotional moment: MJ and Mum close together (sofa/bedside), hand squeeze. | home_muted | left | APPROVED(10), pose_vulnerable_with_adult | |
-| 17 | That didn't make everything easier.\nThere were still hard days.\nDays MJ fell over.\nDays her legs wouldn't listen.\nDays she cried because her body felt cross with her. | MJ sitting on the floor after a gentle stumble, small tears, hugging a knee. Gentle, not dramatic. | home_muted | right | pose_sad_curled | |
-| 18 | Days people said things that hurt.\n'But you don't look sick.' | MJ hurt by words, looking down; other children implied softly (partial figures/shadows at edge), MJ the clear focus. | home_muted | left | pose_hurt_standing | |
+| 16 | 'Will I always be different?' MJ asked quietly.\nHer Mum squeezed her hand.\n'Yes,' she said gently.\n'But different does not mean less.' | Quiet emotional moment: MJ and corrected Mum close together (sofa/bedside), hand squeeze. | home_muted | left | APPROVED(10), pose_vulnerable_with_adult | |
+| 17 | That didn't make everything easier.\nThere were still hard days.\nSome days MJ fell over.\nSome days her legs wouldn't listen.\nSome days she cried because her body felt cross with her. | MJ sitting on the floor after a gentle stumble, small tears, hugging a knee. Gentle, not dramatic. | home_muted | right | pose_sad_curled | |
+| 18 | Some days people said things that hurt.\n'But you don't look sick.' | MJ hurt by words, looking down; other children implied softly (partial figures/shadows at edge), MJ the clear focus. | home_muted | left | pose_hurt_standing | |
 | 19 | MJ wished they could see what she felt.\nThe aching in her legs.\nThe tiredness behind her smile.\nThe fear that came when she had to walk across a room by herself. | MJ at one side of a room, facing the long distance across it; hidden-symptom mood, brave-but-afraid. | home_muted | right | pose_afraid_to_cross | |
 | 20 | But little by little…\nMJ learned something.\nShe was still MJ.\nStill funny.\nStill brave.\nStill full of colour.\nStill full of dreams. | Self-recognition: MJ seeing herself (mirror motif allowed), warm hopeful light and colour returning. | home | left | pose_self_recognition | |
 | 21 | On wobbly days, she moved slower.\nOn tired days, she rested.\nOn hard days, she asked for help. | ONE strong restful image (no montage/collage): MJ resting cosily (blanket/cushion), calm and accepting. | home | right | pose_resting | |
 | 22 | And one afternoon, while painting swirls of bright orange across a canvas, her little cousin asked:\n'What are you making?'\nMJ smiled.\n'My messy storm.' | Warm art room: MJ painting big orange swirls on a canvas/easel, paintbrush in hand; little Cousin (small human child, curious) watching. MJ dominant. | art_room | left | anchor_art_room | Defines Cousin's canon look. |
-| 23 | Her cousin frowned.\n'It looks sunny too.'\nMJ grinned.\n'It can be both.' | Cousin and MJ looking at the swirl painting together; sunny/stormy duality visible in the painting. | art_room | right | APPROVED(22), anchor_painting_look | |
+| 23 | Her cousin frowned.\n'It looks sunny too.'\nMJ grinned.\n'It can be both.' | Cousin and MJ looking at the swirl painting together; MJ is approximately the cousin's standing height, matching pages 22 and 24. | art_room | right | APPROVED(22), anchor_painting_look | |
 | 24 | That made her cousin think very hard.\nThen he smiled.\n'Oh.'\nAnd maybe life could be like that too. | Quiet reflective beat: Cousin thinking then softly smiling, MJ beside the painting. | art_room | left | APPROVED(22) | |
 | 25 | Hard and beautiful.\nScary and brave.\nDifferent and wonderful. | Symbolic, simple, poetic: MJ peaceful amid soft orange swirls/light (echo of the painting), minimal scene. | art_room | right | APPROVED(22) | |
 | 26 | Soon MJ began sharing her story.\nShe told children that some differences are easy to see…\nand some are hidden. | MJ gently speaking to a small group of listening children (diverse, simple, soft style); MJ the focus. | classroom | left | anchor_art_room | No classroom anchor exists; rely on style-lock + canon. |
 | 27 | Some people use wheelchairs.\nSome wear hearing aids.\nSome need medicine.\nSome need extra rest.\nAnd everyone deserves kindness. | Inclusive, age-appropriate children/community scene (a child with a wheelchair, a hearing aid — gentle, simple); MJ present and warm. | classroom | right | APPROVED(26) | |
 | 28 | One little girl raised her hand.\n'So being different isn't bad?'\nMJ smiled.\n'No.' | A little girl with raised hand asking; MJ smiling reassuringly. | classroom | left | APPROVED(26) | |
-| 29 | She looked around the room.\n'Different just means we all have different stories.'\nA quiet voice whispered from the back:\n'That makes the world more interesting.' | Warm classroom/group scene, children listening, cosy togetherness. | classroom | right | APPROVED(26) | |
+| 29 | She looked around the room.\n'Different just means we all have different stories.'\n'That makes the world more interesting.' | Warm classroom/group scene, children listening, cosy togetherness. | classroom | right | APPROVED(26) | |
 | 30 | MJ felt tears sting her eyes.\nBecause once, she thought being different meant something was wrong with her.\nBut maybe…\nit just meant her story looked different. | MJ emotionally moved, gentle glistening tears, warm light — moved, not despairing. | home | left | pose_moved_tears | Distinct from the night pages; warm indoor. |
-| 31 | That night, MJ stood at her window looking at the stars.\nHer legs hurt.\nHer body was tired.\nBut her heart felt full. | MJ at her bedroom window at night, stars outside, warm lamp inside; tired but peaceful. | night | right | anchor_night_window | |
-| 32 | Because even on the wobbly days…\nshe was still learning.\nStill growing.\nStill shining.\nAnd being different?\nThat was never something to hide.\nThat was something to honour. | Final hopeful image: MJ peaceful and quietly proud, stars or warm glow. NO magical cure imagery (MJ is not "fixed"). | night | left | APPROVED(31), pose_proud_peaceful | |
+| 31 | That night, MJ stood at her window looking at the stars.\nHer legs hurt.\nHer body was tired.\nBut her heart felt full. | MJ at her bedroom window at night, stars outside, warm lamp inside; tired but peaceful; exactly two legs and two feet, no ambiguous extra limb. | night | right | anchor_night_window | |
+| 32 | Because even on the wobbly days…\nshe was still learning.\nStill growing.\nStill shining.\nAnd being different?\nThat was never something to hide.\nThat was something to honour. | Final hopeful image: MJ peaceful and quietly proud, stars or warm glow; exactly two legs and two feet, no ambiguous extra limb. NO magical cure imagery (MJ is not "fixed"). | night | left | APPROVED(31), pose_proud_peaceful | |
 
 `pages.yaml` schema (one list, 32 entries):
 
@@ -301,14 +303,15 @@ codex exec --skip-git-repo-check \
   '<QA prompt below>'
 ```
 
-QA prompt (verbatim; `{side}` from the page spec):
+QA prompt (base contract; `{side}` from the page spec; the July 2026 revision
+adds the final requirement fields shown here):
 
-> Image 1 is the approved canonical reference for the character MJ. Image 2 is the approved turnaround sheet. Image 3 is a candidate book-page illustration. Judge the candidate STRICTLY. Answer with ONLY a JSON object, no markdown fence, with keys: "mj_match" (bool: same face, eye style with white sclera and catchlights, freckles on both cheeks, upward hair tufts, warm orange colour, plush controlled fur), "proportions" (bool: compact pear-shaped body, SHORT rounded arms and legs — false if tall, slim, elongated or long-limbed), "no_unapproved_clothing" (bool — cream socks are permitted ONLY if the scene is a kitchen dance), "style_match" (bool: soft painterly storybook, not flat cartoon, not glossy 3D, not anime), "no_text" (bool: true if there is NO text, lettering, labels or signage anywhere), "single_scene" (bool: no collage, grid or panels), "landscape" (bool: clearly wider than tall), "text_safe_zone" (bool: the {side} ~35% of the image is low-detail and free of characters and faces), "no_purple_ribbon" (bool), "child_safe" (bool: emotionally gentle, nothing frightening), "failures" (array of short strings describing every false item, empty if all true).
+> Image 1 is the approved canonical reference for the character MJ. Image 2 is the approved turnaround sheet. Image 3 is a candidate book-page illustration. Judge the candidate STRICTLY. Answer with ONLY a JSON object, no markdown fence, with keys: "mj_match" (bool: same face, eye style with white sclera and catchlights, freckles on both cheeks, upward hair tufts, warm orange colour, plush controlled fur), "proportions" (bool: compact pear-shaped body, SHORT rounded arms and legs — false if tall, slim, elongated or long-limbed), "no_unapproved_clothing" (bool — cream socks are permitted ONLY if the scene is a kitchen dance), "style_match" (bool: soft painterly storybook, not flat cartoon, not glossy 3D, not anime), "no_text" (bool: true if there is NO text, lettering, labels or signage anywhere), "single_scene" (bool: no collage, grid or panels), "landscape" (bool: clearly wider than tall), "text_safe_zone" (bool: the {side} ~35% of the image is low-detail and free of characters and faces), "no_purple_ribbon" (bool), "child_safe" (bool: emotionally gentle, nothing frightening), "requirements_match" (bool: every mandatory page-specific requirement is visibly satisfied), "failures" (array of short strings describing every false item, empty if all true). Mandatory page-specific requirements: {requirements}.
 
-Parsing: strip any accidental code fences, `json.loads`, verdict = all ten booleans true. Any `false` → FAIL; log the row and regenerate with failures appended (§8.2). After **4 failed attempts** on a page, stop that page and surface it to the human operator with the four candidates and their failure lists — do not endlessly burn quota. Additionally, `landscape` is pre-checked in Python (width/height ≥ 1.25 else auto-fail without a QA call), since it's free.
+Parsing: strip any accidental code fences, `json.loads`, verdict = all ten original booleans true (the July 2026 feedback revision adds an eleventh `requirements_match` boolean). Any `false` → FAIL; log the row and regenerate with failures appended (§8.2). After **4 failed attempts** on a page in one production or revision run, stop that page and surface it to the human operator with the four candidates and their failure lists — do not endlessly burn quota. Additionally, `landscape` is pre-checked in Python (width/height ≥ 1.25 else auto-fail without a QA call), since it's free.
 
 `09_NOTES/approval_log.csv` columns:
-`timestamp,page,attempt,render_path,mj_match,proportions,no_unapproved_clothing,style_match,no_text,single_scene,landscape,text_safe_zone,no_purple_ribbon,child_safe,verdict,failures`
+`timestamp,page,attempt,render_path,mj_match,proportions,no_unapproved_clothing,style_match,no_text,single_scene,landscape,text_safe_zone,no_purple_ribbon,child_safe,requirements_match,verdict,failures` (the July 2026 revision migrates historic rows with a blank `requirements_match` value).
 
 ### 8.4 Human-eye checklist (used at triage ⚠ marks and final review)
 
@@ -398,7 +401,7 @@ Write a validator `pipeline/validate_manuscript.py` that loads the YAML and asse
 
 - **Cost/quota:** every generation and QA call burns ChatGPT-subscription quota (~46K tokens per generation observed). Worst case ≈ 32 pages × 4 attempts × (gen + QA) — run sequentially, and stop on quota errors rather than thrashing (OQ-2).
 - **Determinism/audit:** never delete renders or log rows; every attempt is traceable (page, attempt, verdict, failure reasons). The delivered `reference images/` folder is never modified.
-- **Error handling:** engine raises with full Codex stdout on harvest failure; driver treats any engine/QA exception as a failed attempt and continues the retry loop. Such rows are logged with `verdict=ERROR`, all ten boolean columns empty, `render_path` empty if no image was produced, and `failures=["pipeline-error: <message>"]`. All `render_path` values in the log are **repo-relative** (e.g. `MJ_BOOK_PRODUCTION/06_RENDERS/page_05/attempt_2.png`) so `finish.py --redo-all` can read them back regardless of cwd.
+- **Error handling:** engine raises with full Codex stdout on harvest failure; driver treats non-quota engine/QA exceptions as failed attempts and continues the retry loop. Quota/rate-limit/usage-limit errors abort immediately. Error rows use `verdict=ERROR`, boolean columns empty, `render_path` empty if no image was produced, and `failures=["pipeline-error: <message>"]`. All `render_path` values in the log are **repo-relative** (e.g. `MJ_BOOK_PRODUCTION/06_RENDERS/page_05/attempt_2.png`) so `finish.py --redo-all` can read them back regardless of cwd.
 - **Security:** no secrets exist in this pipeline; do not commit `~/.codex` contents; the two API keys visible in the ambient environment (`LINEAR_API_KEY`, `NEON_API_KEY`) are unrelated — never touch them.
 - **Testing:** this pipeline's "tests" are the calibration checks (Phase 3), the smoke test (Phase 2), the manuscript validator (Phase 1), and the visual gates (Phases 4/5). No unit-test framework is warranted for ~400 lines of glue; correctness lives in the gates.
 
@@ -406,7 +409,7 @@ Write a validator `pipeline/validate_manuscript.py` that loads the YAML and asse
 
 1. `python3 pipeline/validate_manuscript.py` → `32 pages OK`.
 2. `ls MJ_BOOK_PRODUCTION/07_APPROVED | wc -l` → 32; Pillow loop → all 2048×1448.
-3. `approval_log.csv` contains a PASS row for every page 1–32; no page has >4 attempts logged.
+3. `approval_log.csv` contains a PASS row for every page 1–32; no page consumes more than four attempts in a single original-production or client-revision run (historic and revision attempts remain cumulatively logged).
 4. Final visual sweep (the client's own test, §8.4) on all 32 layout PNGs — MJ recognisably identical across the whole book; text verbatim; safe zones clean; title exactly *MJ and the Wobbly Days*.
 5. Proof PDF: 32 pages, correct order, opens in a standard viewer.
 
@@ -414,7 +417,7 @@ Write a validator `pipeline/validate_manuscript.py` that loads the YAML and asse
 
 **Risks / edge cases**
 - **Character drift remains possible** (gpt-image-2 docs warn recurring-character consistency can drift). Mitigated by canon-first refs + strict QA + retry-with-reasons + 4-attempt circuit breaker. Historically page 5 drifted; pages with humans (10–14, 22–29) are the next most likely to need retries.
-- **Supporting-character drift** (Mum/Doctor/Cousin) is judged only by eye at the pilot and spot-checks — the automated QA gate covers MJ only. Progressive canon (`APPROVED(n)` refs) is the structural mitigation.
+- **Supporting-character drift** (Mum/Doctor/Cousin) is controlled by progressive canon (`APPROVED(n)` refs), page-specific `requirements_match` QA in the July 2026 revision, and human spot-checks.
 - **Codex output-size ceiling:** ~1.5 MP. Accepted for this deliverable (proof/digital ~250 dpi); print masters are OQ-1.
 - **Harvest fragility:** Codex's stdout format may change; the mtime-scan fallback in `engine.py` covers it.
 - **QA model leniency:** vision reviewers err lenient; the Phase 3 calibration against a known-rejected image is mandatory, and human spot-checks are non-negotiable.
@@ -424,7 +427,8 @@ Write a validator `pipeline/validate_manuscript.py` that loads the YAML and asse
 - **OQ-1:** Will an `OPENAI_API_KEY` (platform billing) be provided? If yes, a follow-up work item reimplements `engine.generate_image` against `POST /v1/images/edits` with `model=gpt-image-2`, `size=2896x2048`, up to 16 refs, and regenerates print masters through the same QA gate. Nothing else in the pipeline changes.
 - **OQ-2:** What is the ChatGPT plan's image-generation quota? If `--all` hits limits, production continues in batches across days — idempotency makes this safe.
 - **OQ-3:** Can the client (Hasan) supply the original PNG canon files (`MJ_CANON_01_primary.png`, turnaround, approved pages)? The WhatsApp JPEGs are recompressed (canon is 48 KB); originals would improve conditioning. Swap-in is a file replacement in `02_CHARACTER_CANON/` + full regeneration decision by the operator.
-- **OQ-4:** Does the client want the external cover produced later? (Out of scope here by their own spec.)
+- **OQ-4 — resolved:** The client requested the external cover in July 2026;
+  produce it under `MJ_BOOK_PRODUCTION/10_COVER/` per the feedback revision.
 
 ## 13. Reference
 
@@ -432,7 +436,7 @@ Write a validator `pipeline/validate_manuscript.py` that loads the YAML and asse
 - Spec PDFs: repo root (transcribed into §7–§8 of this plan; plan is authoritative).
 - Source images: `reference images/` (read-only; triage map §8.1).
 - Pipeline code: `pipeline/*.py`. Production tree: `MJ_BOOK_PRODUCTION/`.
-- Codex binary: `codex` (v0.142.5); generated images land in `~/.codex/generated_images/<uuid>/`.
+- Codex binary: `codex` (v0.144.1); generated images land in `~/.codex/generated_images/<uuid>/`.
 
 **Verified command shapes**
 - Generate: `codex exec --skip-git-repo-check --image ref1.jpeg,ref2.jpeg -- '$imagegen <prompt>'`
